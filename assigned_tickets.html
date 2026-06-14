@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketMaster — Назначенные тикеты</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <input class="theme-radio visually-hidden" type="radio" name="theme" id="t-light" value="light" checked>
+    <input class="theme-radio visually-hidden" type="radio" name="theme" id="t-dark" value="dark">
+    <div class="page">
+        <aside class="sidebar">
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="brand">
+                <img class="brand__logo" src="../media/logo.png" alt="TicketMaster">
+                <div class="brand__name">TicketMaster</div>
+            </div>
+
+            <nav class="menu" aria-label="Основная навигация">
+                <a class="menu__link" href="index.html">Главная</a>
+                <a class="menu__link" href="my_tickets.html">Мои тикеты</a>
+                <a class="menu__link" href="create_ticket.html">Создать тикет</a>
+                <a class="menu__link" href="suggested_tickets.html">Предложенные<br>тикеты</a>
+                <a class="menu__link menu__link--active" href="assigned_tickets.html">Назначенные<br>тикеты</a>
+            </nav>
+
+            <div class="profile">
+                <div class="profile__name">Новожилов Максим</div>
+                <div class="profile__role">Сотрудник</div>
+                <a class="logout" href="auth.html">Выйти из аккаунта</a>
+            </div>
+        </aside>
+
+        <main class="content content--list">
+            <div class="theme-switcher" role="group" aria-label="Переключение темы">
+                <label class="theme-switcher__option theme-switcher__option--light" for="t-light">Светлая</label>
+                <label class="theme-switcher__option theme-switcher__option--dark" for="t-dark">Тёмная</label>
+            </div>
+
+            <section class="tickets tickets--list" aria-labelledby="assigned-title">
+                <h1 id="assigned-title">Назначенные тикеты</h1>
+
+                <div class="table-card table-card--assigned">
+                    <table class="tickets-table tickets-table--assigned">
+                        <thead>
+                            <tr>
+                                <th class="col-id">№</th>
+                                <th class="col-title">Тема</th>
+                                <th class="col-category">Категория</th>
+                                <th class="col-status">Статус</th>
+                                <th class="col-date">Обновлено</th>
+                                <th class="col-details">Подробнее</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="col-id">64</td>
+                                <td>Не работает VPN</td>
+                                <td>Доступы</td>
+                                <td class="col-status"><span class="badge badge--warning">В работе</span></td>
+                                <td>Вчера</td>
+                                <td class="col-details"><a class="details-link" href="assigned_ticket.html">Перейти</a></td>
+                            </tr>
+                            <tr>
+                                <td class="col-id">63</td>
+                                <td>Ошибка при печати</td>
+                                <td>Оборудование</td>
+                                <td class="col-status"><span class="badge badge--waiting">Ожидает ответа</span></td>
+                                <td>Вчера</td>
+                                <td class="col-details"><a class="details-link" href="assigned_ticket.html">Перейти</a></td>
+                            </tr>
+                            <tr>
+                                <td class="col-id">62</td>
+                                <td>Установить MS Teams</td>
+                                <td>Программное<br>обеспечение</td>
+                                <td class="col-status"><span class="badge badge--warning">В работе</span></td>
+                                <td>26.04.2026</td>
+                                <td class="col-details"><a class="details-link" href="assigned_ticket.html">Перейти</a></td>
+                            </tr>
+                            <tr>
+                                <td class="col-id">61</td>
+                                <td>Запрос на другой пароль</td>
+                                <td>Доступы</td>
+                                <td class="col-status"><span class="badge badge--closed">Закрыт</span></td>
+                                <td>25.04.2026</td>
+                                <td class="col-details"><a class="details-link" href="assigned_ticket.html">Перейти</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>

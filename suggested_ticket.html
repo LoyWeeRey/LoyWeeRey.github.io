@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TicketMaster — Просмотр предложенного тикета</title>
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <input class="theme-radio visually-hidden" type="radio" name="theme" id="t-light" value="light" checked>
+    <input class="theme-radio visually-hidden" type="radio" name="theme" id="t-dark" value="dark">
+    <div class="page">
+        <aside class="sidebar">
+            <button class="burger" type="button" aria-label="Открыть меню" aria-expanded="false">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="brand">
+                <img class="brand__logo" src="../media/logo.png" alt="TicketMaster">
+                <div class="brand__name">TicketMaster</div>
+            </div>
+
+            <nav class="menu" aria-label="Основная навигация">
+                <a class="menu__link" href="index.html">Главная</a>
+                <a class="menu__link" href="my_tickets.html">Мои тикеты</a>
+                <a class="menu__link" href="create_ticket.html">Создать тикет</a>
+                <a class="menu__link menu__link--active" href="suggested_tickets.html">Предложенные<br>тикеты</a>
+                <a class="menu__link" href="assigned_tickets.html">Назначенные<br>тикеты</a>
+            </nav>
+
+            <div class="profile">
+                <div class="profile__name">Новожилов Максим</div>
+                <div class="profile__role">Сотрудник</div>
+                <a class="logout" href="auth.html">Выйти из аккаунта</a>
+            </div>
+        </aside>
+
+        <main class="content content--detail">
+            <div class="theme-switcher" role="group" aria-label="Переключение темы">
+                <label class="theme-switcher__option theme-switcher__option--light" for="t-light">Светлая</label>
+                <label class="theme-switcher__option theme-switcher__option--dark" for="t-dark">Тёмная</label>
+            </div>
+
+            <section class="ticket-detail" aria-labelledby="ticket-title">
+                <article class="ticket-summary">
+                    <div class="ticket-summary__top">
+                        <h1 id="ticket-title">Не работает VPN</h1>
+                        <div class="ticket-actions">
+                            <span class="ticket-status ticket-status--open">Открыт</span>
+                            <div class="ticket-menu">
+
+                            <button class="ticket-menu__button" type="button" aria-label="Действия с тикетом">
+                                <span></span><span></span><span></span>
+                            </button>
+                            <div class="ticket-menu__dropdown">
+                                <a href="suggested_tickets.html">Вернуться к списку</a>
+                                <button type="button">Принять тикет</button>
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <dl class="ticket-meta">
+                        <div>
+                            <dt>Категория</dt>
+                            <dd>Доступы</dd>
+                        </div>
+                        <div>
+                            <dt>Подразделение</dt>
+                            <dd>Бухгалтерия</dd>
+                        </div>
+                        <div>
+                            <dt>Исполнитель</dt>
+                            <dd>---</dd>
+                        </div>
+                        <div>
+                            <dt>Последнее обновление</dt>
+                            <dd>Вчера</dd>
+                        </div>
+                    </dl>
+                </article>
+
+                <aside class="discussion" aria-labelledby="discussion-title">
+                    <h2 id="discussion-title">Обсуждение</h2>
+                    <div class="discussion__messages">
+                        <article class="message">
+                            <h3>Новожилов Максим</h3>
+                            <p>Включаю vpn, бесконечно загружается и выдаёт ошибку. Не знаю, что делать.</p>
+                        </article>
+                    </div>
+                    <form class="message-form" action="#" method="post">
+                        <label class="visually-hidden" for="message-text">Сообщение</label>
+                        <input id="message-text" type="text" name="message" placeholder="Введите сообщение">
+                        <button type="submit" aria-label="Отправить сообщение">
+                            <svg width="21" height="20" viewBox="0 0 21 20" fill="none" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.3 2.2L2.2 8.7C1.65 8.92 1.67 9.72 2.24 9.91L7.8 11.8L9.8 17.34C10 17.9 10.79 17.91 11.02 17.36L18.3 2.2Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/>
+                                <path d="M18.1 2.4L7.8 11.8" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                            </svg>
+                        </button>
+                    </form>
+                </aside>
+            </section>
+        </main>
+    </div>
+
+    <script src="../script.js"></script>
+</body>
+</html>
