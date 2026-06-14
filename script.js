@@ -11,6 +11,12 @@ function setTheme(theme) {
 }
 setTheme(savedTheme === 'dark' ? 'dark' : 'light');
 
+themeRadios.forEach(radio => {
+    radio.addEventListener('change', (e) => {
+        setTheme(e.target.value); // Передаем 'light' или 'dark' из value инпута
+    });
+});
+
 
 
 // БУРГЕРР
