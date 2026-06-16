@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TicketMaster — Предложенные тикеты</title>
+    <title>TicketMaster — Главная</title>
     <link rel="stylesheet" href="../styles/style.css">
 </head>
 <body>
@@ -25,7 +25,7 @@
                 <a class="menu__link" href="index.html">Главная</a>
                 <a class="menu__link" href="my_tickets.html">Мои тикеты</a>
                 <a class="menu__link" href="create_ticket.html">Создать тикет</a>
-                <a class="menu__link menu__link--active" href="suggested_tickets.html">Предложенные<br>тикеты</a>
+                <a class="menu__link" href="suggested_tickets.html">Предложенные<br>тикеты</a>
                 <a class="menu__link" href="assigned_tickets.html">Назначенные<br>тикеты</a>
             </nav>
 
@@ -36,37 +36,44 @@
             </div>
         </aside>
 
-        <main class="content content--list">
+        <main class="content">
             <div class="theme-switcher" role="group" aria-label="Переключение темы">
                 <label class="theme-switcher__option theme-switcher__option--light" for="t-light">Светлая</label>
                 <label class="theme-switcher__option theme-switcher__option--dark" for="t-dark">Тёмная</label>
             </div>
 
-            <section class="tickets tickets--list">
-                <h1 id="suggested-title">Предложенные тикеты</h1>
+            <section class="profile__page">
+                <div class="profile__container">
+                    <h2 id="profile__title">Личный кабинет</h2>
+                    
+                    <div class="profile__container__text">
+                        <div>
+                            <p class="profile__name profile__text--big">Имя</p>
+                            <p class="profile__name profile__text--little">Максим</p>
+                        </div>
 
-                <div class="table-card table-card--suggested">
-                    <table class="tickets-table tickets-table--suggested">
-                        <thead>
-                            <tr>
-                                <th class="col-id">№</th>
-                                <th class="col-title">Тема</th>
-                                <th class="col-category">Категория</th>
-                                <th class="col-date">Обновлено</th>
-                                <th class="col-details">Подробнее</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td class="col-id">65</td>
-                                <td>Нет доступа к общему диску</td>
-                                <td>Сетевые сервисы</td>
-                                <td>10:15</td>
-                                <td class="col-details"><a class="details-link" href="suggested_ticket.html">Перейти</a></td>
-                            </tr>
-                        </tbody>
-                    </table>
+                        <div>
+                            <p class="profile__surname profile__text--big">Фамилия</p>
+                            <p class="profile__surname profile__text--little">Новожилов</p>
+                        </div>
+
+                        <div>
+                            <p class="profile__podrazdel profile__text--big">Подразделение</p>
+                            <p class="profile__podrazdel profile__text--little">Бухгалтерия</p>
+                        </div>
+
+                        <div>
+                            <p class="profile__category">Ответственный за категории</p>
+                            <ul class="profile__text--little">
+                                <li profile__text--little>Доступы</li>
+                                <li>Программное обеспечение</li>
+                                <li>Сетевые сервисы</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
+                
+
             </section>
         </main>
     </div>
